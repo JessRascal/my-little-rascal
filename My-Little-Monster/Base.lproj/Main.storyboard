@@ -198,7 +198,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="k0K-Ba-fct">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character5_idle1" translatesAutoresizingMaskIntoConstraints="NO" id="SoM-g9-xCf" customClass="MonsterImage" customModule="My_Little_Monster" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_idle1" translatesAutoresizingMaskIntoConstraints="NO" id="SoM-g9-xCf" customClass="MonsterImage" customModule="My_Little_Monster" customModuleProvider="target">
                                 <rect key="frame" x="160" y="374" width="280" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="KhX-AA-r9r"/>
@@ -413,11 +413,11 @@
         <image name="BlurredBackground" width="1925" height="1280"/>
         <image name="BoxingGlove" width="700" height="877"/>
         <image name="bg" width="768" height="1024"/>
+        <image name="character1_idle1" width="599" height="372"/>
         <image name="character1_selection" width="115" height="115"/>
         <image name="character2_selection" width="115" height="115"/>
         <image name="character3_selection" width="115" height="115"/>
         <image name="character4_selection" width="115" height="115"/>
-        <image name="character5_idle1" width="599" height="372"/>
         <image name="food" width="95" height="98"/>
         <image name="ground" width="1444" height="151"/>
         <image name="heart" width="95" height="98"/>

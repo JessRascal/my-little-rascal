@@ -431,10 +431,10 @@
         <image name="BoxingGlove" width="700" height="877"/>
         <image name="bg" width="768" height="1024"/>
         <image name="character1_idle1" width="599" height="372"/>
-        <image name="character1_selection" width="115" height="115"/>
-        <image name="character2_selection" width="115" height="115"/>
-        <image name="character3_selection" width="115" height="115"/>
-        <image name="character4_selection" width="115" height="115"/>
+        <image name="character1_selection" width="128" height="128"/>
+        <image name="character2_selection" width="128" height="128"/>
+        <image name="character3_selection" width="128" height="128"/>
+        <image name="character4_selection" width="128" height="128"/>
         <image name="food" width="95" height="98"/>
         <image name="ground" width="1444" height="151"/>
         <image name="heart" width="95" height="98"/>

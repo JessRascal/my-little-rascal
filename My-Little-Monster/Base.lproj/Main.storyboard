@@ -36,7 +36,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Vkt-td-r2T">
                                 <rect key="frame" x="124" y="95" width="260" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" tag="5" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-yn-kTe" userLabel="character1Button">
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-yn-kTe" userLabel="character1Button">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                         <state key="normal" image="character1_selection"/>
                                         <connections>

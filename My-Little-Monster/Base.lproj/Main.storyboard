@@ -38,6 +38,10 @@
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-yn-kTe" userLabel="character1Button">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="VUI-qT-W0K"/>
+                                            <constraint firstAttribute="width" constant="115" id="Wqc-ub-x22"/>
+                                        </constraints>
                                         <state key="normal" image="character1_selection"/>
                                         <connections>
                                             <action selector="callCharacterSelectedSegue:" destination="9Xx-iw-9bj" eventType="touchUpInside" id="HlH-Rr-yWp"/>
@@ -45,6 +49,10 @@
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqi-G2-crd" userLabel="character2Button">
                                         <rect key="frame" x="145" y="0.0" width="115" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="Jwv-1Y-iYF"/>
+                                            <constraint firstAttribute="width" constant="115" id="nnH-c8-31X"/>
+                                        </constraints>
                                         <state key="normal" image="character2_selection"/>
                                         <connections>
                                             <action selector="callCharacterSelectedSegue:" destination="9Xx-iw-9bj" eventType="touchUpInside" id="krA-AO-fIS"/>
@@ -61,15 +69,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fkh-ql-gXp">
                                 <rect key="frame" x="124" y="237" width="260" height="115"/>
                                 <subviews>
-                                    <button opaque="NO" tag="3" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-IL-rpX" userLabel="character3Button">
+                                    <button opaque="NO" tag="3" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJd-IL-rpX" userLabel="character3Button">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="8Pa-sT-12y"/>
+                                            <constraint firstAttribute="height" constant="115" id="gos-ax-hM5"/>
+                                        </constraints>
                                         <state key="normal" image="character3_selection"/>
                                         <connections>
                                             <action selector="callCharacterSelectedSegue:" destination="9Xx-iw-9bj" eventType="touchUpInside" id="aEK-Yh-u3D"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgv-bT-2zo" userLabel="character4Button">
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgv-bT-2zo" userLabel="character4Button">
                                         <rect key="frame" x="145" y="0.0" width="115" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="fZc-NO-Xs7"/>
+                                            <constraint firstAttribute="height" constant="115" id="j0y-hS-Age"/>
+                                        </constraints>
                                         <state key="normal" image="character4_selection"/>
                                         <connections>
                                             <action selector="callCharacterSelectedSegue:" destination="9Xx-iw-9bj" eventType="touchUpInside" id="I08-MI-awq"/>
@@ -398,6 +414,7 @@
                         <outlet property="foodImage" destination="PYZ-rY-yks" id="VO6-1z-rga"/>
                         <outlet property="gloveImage" destination="xo5-Wb-ryL" id="3Hj-Ty-2uN"/>
                         <outlet property="heartImage" destination="Szs-5I-Jf1" id="NEm-n8-bxY"/>
+                        <outlet property="livesPanel" destination="mIF-Kh-OcB" id="9hA-3b-6yc"/>
                         <outlet property="monsterImage" destination="SoM-g9-xCf" id="6A7-KM-cE3"/>
                         <outlet property="penalty1Image" destination="rng-vm-eOX" id="83Y-bq-Z1J"/>
                         <outlet property="penalty2Image" destination="p6b-QE-x0O" id="YjS-sv-fQT"/>

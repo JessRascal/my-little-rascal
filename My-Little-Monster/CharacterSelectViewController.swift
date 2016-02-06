@@ -7,11 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CharacterSelectViewController: UIViewController {
     
+    var musicPlayer: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Play background music.
+        do {
+            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
+        musicPlayer.prepareToPlay()
+        musicPlayer.volume = 0.1
+        musicPlayer.numberOfLoops = -1
+        musicPlayer.play()
     }
     
     override func didReceiveMemoryWarning() {

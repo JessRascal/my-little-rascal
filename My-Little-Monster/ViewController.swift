@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var gloveImage: DragImage!
     @IBOutlet weak var penalty1Image: UIImageView!
     @IBOutlet weak var penalty2Image: UIImageView!
-    @IBOutlet weak var penalty3Image: UIImageView!    
+    @IBOutlet weak var penalty3Image: UIImageView!
     @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var livesPanel: UIImageView!
     
     // Constants
     let DIM_ALPHA: CGFloat = 0.2
@@ -34,7 +35,6 @@ class ViewController: UIViewController {
     var characterSelected: Int!
     
     // Sound effects
-    var musicPlayer: AVAudioPlayer!
     var sfxBite: AVAudioPlayer!
     var sfxHeart: AVAudioPlayer!
     var sfxHit: AVAudioPlayer!
@@ -47,18 +47,12 @@ class ViewController: UIViewController {
         
         // Setup audio players.
         do {
-            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
             
             try sfxBite = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
             try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
             try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
             try sfxHit = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hit", ofType: "wav")!))
-            
-            musicPlayer.prepareToPlay()
-            musicPlayer.volume = 0.1
-            musicPlayer.numberOfLoops = -1
-            musicPlayer.play()
             
             sfxBite.prepareToPlay()
             sfxBite.volume = 0.2
@@ -86,6 +80,15 @@ class ViewController: UIViewController {
         heartImage.dropTarget = monsterImage
         gloveImage.dropTarget = monsterImage
         
+        foodImage.hidden = false
+        heartImage.hidden = false
+        gloveImage.hidden = false
+        
+        livesPanel.hidden = false
+        penalty1Image.hidden = false
+        penalty2Image.hidden = false
+        penalty3Image.hidden = false
+        
         penalty1Image.alpha = DIM_ALPHA
         penalty2Image.alpha = DIM_ALPHA
         penalty3Image.alpha = DIM_ALPHA
@@ -95,6 +98,7 @@ class ViewController: UIViewController {
         
         // Start the character idle animation.
         monsterImage.playIdleAnimation()
+        monsterHappy = true
         startTimer()
     }
     
@@ -187,7 +191,7 @@ class ViewController: UIViewController {
         buttonStackView.hidden = true
         resetPenalties()
         delay(0.8) {
-            self.setUpGame()
+            self.setUpGame(true)
         }
     }
     
@@ -202,6 +206,14 @@ class ViewController: UIViewController {
     func gameOver() {
         sfxDeath.play()
         timer.invalidate()
+        timer = nil
+        foodImage.hidden = true
+        heartImage.hidden = true
+        gloveImage.hidden = true
+        livesPanel.hidden = true
+        penalty1Image.hidden = true
+        penalty2Image.hidden = true
+        penalty3Image.hidden = true
         monsterImage.playDeathAnimation()
         buttonStackView.hidden = false
     }

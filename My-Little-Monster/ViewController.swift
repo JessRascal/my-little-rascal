@@ -103,7 +103,7 @@ class ViewController: UIViewController {
         foodImage.alpha = DIM_ALPHA
         heartImage.alpha = DIM_ALPHA
         gloveImage.alpha = DIM_ALPHA
-        
+
         // Start the character idle animation.
         monsterImage.playIdleAnimation()
         monsterHappy = true

@@ -214,7 +214,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="k0K-Ba-fct">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_idle1" translatesAutoresizingMaskIntoConstraints="NO" id="SoM-g9-xCf" customClass="MonsterImage" customModule="My_Little_Monster" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_idle1" translatesAutoresizingMaskIntoConstraints="NO" id="SoM-g9-xCf" customClass="MonsterImage" customModule="My_Little_Monster" customModuleProvider="target">
                                 <rect key="frame" x="160" y="374" width="280" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="KhX-AA-r9r"/>

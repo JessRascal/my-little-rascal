@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty3Image: UIImageView!
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var livesPanel: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var groundImage: UIImageView!
     
     // Constants
     let DIM_ALPHA: CGFloat = 0.2
@@ -74,8 +76,14 @@ class ViewController: UIViewController {
         
         setUpGame()
     }
+    
+    func setBgandGround() {
+        backgroundImage.image = UIImage(named: "character\(characterSelected)_bg")
+        groundImage.image = UIImage(named: "character\(characterSelected)_ground")
+    }
 
     func setUpGame(restart: Bool = false) {
+        setBgandGround()
         foodImage.dropTarget = monsterImage
         heartImage.dropTarget = monsterImage
         gloveImage.dropTarget = monsterImage

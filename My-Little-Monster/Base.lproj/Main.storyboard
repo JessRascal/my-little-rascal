@@ -211,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="k0K-Ba-fct">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="k0K-Ba-fct">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_idle1" translatesAutoresizingMaskIntoConstraints="NO" id="SoM-g9-xCf" customClass="MonsterImage" customModule="My_Little_Monster" customModuleProvider="target">
@@ -221,7 +221,7 @@
                                     <constraint firstAttribute="width" constant="280" id="m6z-td-PvK"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-fB-5ws">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character1_ground" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-fB-5ws">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IGv-qH-sWL"/>
@@ -337,7 +337,9 @@
                                 <variation key="heightClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstItem="3PK-eQ-DDR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="110" id="Hpu-ym-ceL"/>
-                            <constraint firstItem="vVY-fB-5ws" firstAttribute="top" secondItem="SoM-g9-xCf" secondAttribute="bottom" id="N1Y-Ry-Ymq"/>
+                            <constraint firstItem="vVY-fB-5ws" firstAttribute="top" secondItem="SoM-g9-xCf" secondAttribute="bottom" id="N1Y-Ry-Ymq">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                            </constraint>
                             <constraint firstItem="SoM-g9-xCf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OqH-gI-LEw"/>
                             <constraint firstItem="3PK-eQ-DDR" firstAttribute="top" secondItem="mIF-Kh-OcB" secondAttribute="bottom" constant="16" id="PI4-8j-T6P"/>
                             <constraint firstAttribute="trailing" secondItem="k0K-Ba-fct" secondAttribute="trailing" id="PPj-KW-tmM"/>
@@ -374,13 +376,13 @@
                                 <exclude reference="kik-WQ-bOR"/>
                                 <exclude reference="lqb-Gp-HYH"/>
                                 <exclude reference="p06-ay-Yja"/>
-                                <exclude reference="Hne-AW-lC3"/>
-                                <exclude reference="OqH-gI-LEw"/>
-                                <exclude reference="qdR-N1-cVn"/>
                                 <exclude reference="6wu-lI-8aZ"/>
                                 <exclude reference="8dA-uc-JAB"/>
                                 <exclude reference="u84-vg-JtW"/>
                                 <exclude reference="z7L-Wf-8zM"/>
+                                <exclude reference="Hne-AW-lC3"/>
+                                <exclude reference="OqH-gI-LEw"/>
+                                <exclude reference="qdR-N1-cVn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -410,9 +412,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="k0K-Ba-fct" id="xzM-4c-wR0"/>
                         <outlet property="buttonStackView" destination="ypo-MA-7Tx" id="Igs-rw-06T"/>
                         <outlet property="foodImage" destination="PYZ-rY-yks" id="VO6-1z-rga"/>
                         <outlet property="gloveImage" destination="xo5-Wb-ryL" id="3Hj-Ty-2uN"/>
+                        <outlet property="groundImage" destination="vVY-fB-5ws" id="hJ0-pi-Mnz"/>
                         <outlet property="heartImage" destination="Szs-5I-Jf1" id="NEm-n8-bxY"/>
                         <outlet property="livesPanel" destination="mIF-Kh-OcB" id="9hA-3b-6yc"/>
                         <outlet property="monsterImage" destination="SoM-g9-xCf" id="6A7-KM-cE3"/>
@@ -429,14 +433,14 @@
     <resources>
         <image name="BlurredBackground" width="1925" height="1280"/>
         <image name="BoxingGlove" width="700" height="877"/>
-        <image name="bg" width="768" height="1024"/>
+        <image name="character1_bg" width="768" height="1024"/>
+        <image name="character1_ground" width="1444" height="151"/>
         <image name="character1_idle1" width="599" height="372"/>
         <image name="character1_selection" width="128" height="128"/>
         <image name="character2_selection" width="128" height="128"/>
         <image name="character3_selection" width="128" height="128"/>
         <image name="character4_selection" width="128" height="128"/>
         <image name="food" width="95" height="98"/>
-        <image name="ground" width="1444" height="151"/>
         <image name="heart" width="95" height="98"/>
         <image name="livespanel" width="468" height="137"/>
         <image name="restartButton" width="212" height="78"/>
